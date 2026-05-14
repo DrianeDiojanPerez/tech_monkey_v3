@@ -192,7 +192,7 @@ function Landing() {
         <nav className="nav">
           <a className="brand" href="#">
             <span className="brand-mark">
-              <img src="/logo.jpg" alt="" />
+              <img src="https://github.com/DrianeDiojanPerez/tech_monkey_v3/blob/master/public/logo.jpg?raw=true" alt="" />
             </span>{" "}
             Tech Monkeys
           </a>
@@ -252,31 +252,77 @@ function Landing() {
       {/* HERO */}
       <header className="hero">
         <div className="hero-ground" aria-hidden="true">
-          <svg viewBox="0 0 1600 120" preserveAspectRatio="none">
+          <svg viewBox="0 0 1600 200" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="tm-sea-fill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stopColor="#c5dde6" stopOpacity="0.55" />
+                <stop offset="1" stopColor="#a8cdd9" stopOpacity="0.9" />
+              </linearGradient>
+            </defs>
+
+            {/* SEA — top quarter (y 0–50) */}
+            <rect x="0" y="0" width="1600" height="50" fill="url(#tm-sea-fill)" />
             <path
-              d="M0 10 Q 400 0, 800 6 T 1600 10 L 1600 120 L 0 120 Z"
+              d="M0 6 L 1600 6"
+              fill="none"
+              strokeWidth="1.5"
+              vectorEffect="non-scaling-stroke"
+              className="ocean-horizon-line"
+            />
+            <path
+              d="M-40 16 Q 60 13, 160 16 T 360 16 T 560 16 T 760 16 T 960 16 T 1160 16 T 1360 16 T 1560 16 L 1640 16"
+              fill="none"
+              strokeWidth="1.2"
+              vectorEffect="non-scaling-stroke"
+              className="wave wave-1"
+            />
+            <path
+              d="M-40 26 Q 80 23, 200 26 T 440 26 T 680 26 T 920 26 T 1160 26 T 1400 26 T 1640 26"
+              fill="none"
+              strokeWidth="1"
+              vectorEffect="non-scaling-stroke"
+              className="wave wave-2"
+            />
+            <path
+              d="M-40 36 Q 110 33, 260 36 T 560 36 T 860 36 T 1160 36 T 1460 36 L 1640 36"
+              fill="none"
+              strokeWidth="0.9"
+              vectorEffect="non-scaling-stroke"
+              className="wave wave-3"
+            />
+            {/* shoreline foam — wavy boundary between sea and sand */}
+            <path
+              d="M-40 44 Q 160 41, 360 45 T 760 45 T 1160 45 T 1640 44 L 1640 50 L -40 50 Z"
+              fill="#fff"
+              opacity="0.35"
+              className="wave wave-1"
+            />
+
+            {/* SAND — bottom three quarters (y 50–200) */}
+            <path
+              d="M0 52 Q 400 46, 800 50 T 1600 52 L 1600 200 L 0 200 Z"
               fill="#efe2c6"
             />
             <path
-              d="M0 10 Q 400 0, 800 6 T 1600 10"
+              d="M0 52 Q 400 46, 800 50 T 1600 52"
               stroke="#d4c298"
               strokeWidth="1.5"
               fill="none"
               vectorEffect="non-scaling-stroke"
             />
             <g fill="#a89a78" opacity="0.5">
-              <circle cx="60" cy="50" r="1.2" />
-              <circle cx="180" cy="70" r="1" />
-              <circle cx="320" cy="58" r="1.4" />
-              <circle cx="460" cy="78" r="1" />
-              <circle cx="600" cy="62" r="1.2" />
-              <circle cx="740" cy="84" r="1" />
-              <circle cx="880" cy="58" r="1.3" />
-              <circle cx="1020" cy="72" r="1.1" />
-              <circle cx="1160" cy="60" r="1.4" />
-              <circle cx="1300" cy="80" r="1" />
-              <circle cx="1440" cy="64" r="1.2" />
-              <circle cx="1560" cy="78" r="1.1" />
+              <circle cx="60" cy="110" r="1.2" />
+              <circle cx="180" cy="138" r="1" />
+              <circle cx="320" cy="118" r="1.4" />
+              <circle cx="460" cy="150" r="1" />
+              <circle cx="600" cy="124" r="1.2" />
+              <circle cx="740" cy="162" r="1" />
+              <circle cx="880" cy="118" r="1.3" />
+              <circle cx="1020" cy="144" r="1.1" />
+              <circle cx="1160" cy="120" r="1.4" />
+              <circle cx="1300" cy="158" r="1" />
+              <circle cx="1440" cy="126" r="1.2" />
+              <circle cx="1560" cy="150" r="1.1" />
             </g>
           </svg>
         </div>
@@ -453,67 +499,6 @@ function Landing() {
                     </g>
                   </g>
 
-                  {/* OCEAN — stylized distant horizon, line-based not a flat band */}
-                  <g className="ocean">
-                    {/* horizon line (thin & dark) */}
-                    <path
-                      d="M0 286 L 460 286"
-                      strokeWidth="1.5"
-                      fill="none"
-                      className="ocean-horizon-line"
-                    />
-                    {/* tiny sailboat in the distance */}
-                    <g className="sailboat">
-                      <path
-                        d="M 400 286 L 416 286 L 410 290 Z"
-                        className="boat-hull"
-                      />
-                      <path
-                        d="M 408 274 L 408 286 L 416 286 Z"
-                        className="boat-sail"
-                      />
-                      <line
-                        x1="408"
-                        y1="274"
-                        x2="408"
-                        y2="286"
-                        strokeWidth="0.8"
-                        className="boat-mast"
-                      />
-                    </g>
-                    {/* wave shimmers — multiple thin lines fading down */}
-                    <path
-                      d="M0 294 Q 30 292, 60 294 T 120 294 T 180 294 T 240 294 T 300 294 T 360 294 T 420 294 T 480 294"
-                      fill="none"
-                      strokeWidth="1.1"
-                      className="wave wave-1"
-                    />
-                    <path
-                      d="M0 302 Q 40 300, 80 302 T 160 302 T 240 302 T 320 302 T 400 302 T 480 302"
-                      fill="none"
-                      strokeWidth="0.9"
-                      className="wave wave-2"
-                    />
-                    <path
-                      d="M0 310 Q 50 308, 100 310 T 200 310 T 300 310 T 400 310 T 480 310"
-                      fill="none"
-                      strokeWidth="0.8"
-                      className="wave wave-3"
-                    />
-                    <path
-                      d="M0 318 Q 60 316, 120 318 T 240 318 T 360 318 T 480 318"
-                      fill="none"
-                      strokeWidth="0.8"
-                      className="wave wave-1"
-                    />
-                    <path
-                      d="M0 326 Q 70 324, 140 326 T 280 326 T 420 326 L 480 326"
-                      fill="none"
-                      strokeWidth="0.8"
-                      className="wave wave-2"
-                    />
-                  </g>
-
                   <g className="cloud cloud-1">
                     <ellipse cx="120" cy="80" rx="42" ry="10" fill="#fff" opacity="0.9" />
                     <ellipse cx="140" cy="74" rx="22" ry="8" fill="#fff" opacity="0.9" />
@@ -602,7 +587,7 @@ function Landing() {
                     <circle cx="202" cy="184" r="7" />
                   </clipPath>
                   <image
-                    href="/logo.jpg"
+                    href="https://github.com/DrianeDiojanPerez/tech_monkey_v3/blob/master/public/logo.jpg?raw=true"
                     x="195"
                     y="177"
                     width="14"
@@ -1187,7 +1172,7 @@ function Landing() {
                     <circle cx="140" cy="280" r="32" />
                   </clipPath>
                   <image
-                    href="/logo.jpg"
+                    href="https://github.com/DrianeDiojanPerez/tech_monkey_v3/blob/master/public/logo.jpg?raw=true"
                     x="108"
                     y="248"
                     width="64"
@@ -1399,7 +1384,7 @@ function Landing() {
                 <div className="post1" />
                 <div className="post2" />
                 <div className="billboard">
-                  <img src="/logo.jpg" alt="" className="billboard-logo" />
+                  <img src="https://github.com/DrianeDiojanPerez/tech_monkey_v3/blob/master/public/logo.jpg?raw=true" alt="" className="billboard-logo" />
                 </div>
                 <div className="road" />
                 <div className="stripe" />
