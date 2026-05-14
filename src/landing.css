@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 html[data-theme="light"],
 html[data-theme="light"] body {
   background: #fbf8f1;
@@ -271,6 +274,7 @@ html[data-theme="dark"] .tm-landing .tm-btn-green {
   padding: 140px 24px 48px;
   position: relative;
   overflow: hidden;
+  transition: background 0.4s ease;
 }
 html[data-theme="light"] .tm-landing .hero {
   background: linear-gradient(180deg, #cfe4ec 0%, #e6e6d8 55%, #f3eddb 100%);
@@ -1298,6 +1302,9 @@ html[data-theme="dark"] .tm-landing .cloud ellipse {
   position: relative;
   overflow: hidden;
   box-shadow: 0 30px 60px -30px rgba(14, 26, 20, 0.5);
+  transition:
+    background 0.4s ease,
+    box-shadow 0.4s ease;
 }
 .tm-landing .show-art .billboard {
   position: absolute;
@@ -1314,6 +1321,10 @@ html[data-theme="dark"] .tm-landing .cloud ellipse {
   font-size: 46px;
   overflow: hidden;
   padding: 14px;
+  transition:
+    background 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
 }
 .tm-landing .show-art .billboard-logo {
   max-width: 70%;
@@ -1329,6 +1340,7 @@ html[data-theme="dark"] .tm-landing .cloud ellipse {
   background: #0e1a14;
   bottom: 8%;
   height: 30%;
+  transition: background 0.4s ease;
 }
 .tm-landing .show-art .post1 {
   left: 24%;
@@ -1343,6 +1355,7 @@ html[data-theme="dark"] .tm-landing .cloud ellipse {
   bottom: 0;
   height: 18%;
   background: linear-gradient(180deg, #1a3a2a, #0a1f14);
+  transition: background 0.4s ease;
 }
 .tm-landing .show-art .stripe {
   position: absolute;
