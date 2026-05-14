@@ -236,6 +236,16 @@ html[data-theme="dark"] .tm-landing {
 .tm-landing .tm-btn-ghost:hover {
   background: var(--line);
 }
+html[data-theme="dark"] .tm-landing .tm-btn-ghost {
+  color: #f1ece0;
+  background: rgba(241, 236, 224, 0.16);
+  border: 1px solid rgba(241, 236, 224, 0.55);
+  backdrop-filter: blur(8px) saturate(140%);
+  -webkit-backdrop-filter: blur(8px) saturate(140%);
+}
+html[data-theme="dark"] .tm-landing .tm-btn-ghost:hover {
+  box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.45);
+}
 .tm-landing .tm-btn-green {
   background: var(--green);
   color: #fff;
@@ -273,42 +283,40 @@ html[data-theme="dark"] .tm-landing .hero::before {
   position: absolute;
   inset: 0 0 170px 0;
   background-image:
-    radial-gradient(1.3px 1.3px at 4% 7%, #fff 50%, transparent 60%),
-    radial-gradient(1px 1px at 9% 18%, #fff 50%, transparent 60%),
-    radial-gradient(1.5px 1.5px at 14% 11%, #fff 50%, transparent 60%),
-    radial-gradient(1px 1px at 19% 28%, #fff 50%, transparent 60%),
-    radial-gradient(1.3px 1.3px at 23% 9%, #fff 50%, transparent 60%),
-    radial-gradient(0.9px 0.9px at 28% 22%, #fff 50%, transparent 60%),
-    radial-gradient(1.2px 1.2px at 33% 6%, #fff 50%, transparent 60%),
-    radial-gradient(1px 1px at 38% 16%, #fff 50%, transparent 60%),
-    radial-gradient(1.4px 1.4px at 42% 30%, #fff 50%, transparent 60%),
-    radial-gradient(1px 1px at 47% 8%, #fff 50%, transparent 60%),
-    radial-gradient(1.2px 1.2px at 52% 22%, #fff 50%, transparent 60%),
-    radial-gradient(1px 1px at 57% 14%, #fff 50%, transparent 60%),
-    radial-gradient(1.3px 1.3px at 62% 6%, #fff 50%, transparent 60%),
-    radial-gradient(0.9px 0.9px at 66% 26%, #fff 50%, transparent 60%),
-    radial-gradient(1.5px 1.5px at 71% 12%, #fff 50%, transparent 60%),
-    radial-gradient(1px 1px at 75% 22%, #fff 50%, transparent 60%),
-    radial-gradient(1.2px 1.2px at 80% 8%, #fff 50%, transparent 60%),
-    radial-gradient(1px 1px at 85% 18%, #fff 50%, transparent 60%),
-    radial-gradient(1.3px 1.3px at 89% 28%, #fff 50%, transparent 60%),
-    radial-gradient(1px 1px at 93% 10%, #fff 50%, transparent 60%),
-    radial-gradient(1.4px 1.4px at 96% 22%, #fff 50%, transparent 60%),
-    radial-gradient(1px 1px at 6% 35%, #fff 50%, transparent 60%),
-    radial-gradient(1.2px 1.2px at 18% 42%, #fff 50%, transparent 60%),
-    radial-gradient(0.9px 0.9px at 32% 38%, #fff 50%, transparent 60%),
-    radial-gradient(1.1px 1.1px at 46% 44%, #fff 50%, transparent 60%),
-    radial-gradient(1.3px 1.3px at 58% 38%, #fff 50%, transparent 60%),
-    radial-gradient(1px 1px at 70% 46%, #fff 50%, transparent 60%),
-    radial-gradient(1.1px 1.1px at 82% 42%, #fff 50%, transparent 60%),
-    radial-gradient(1.3px 1.3px at 92% 38%, #fff 50%, transparent 60%),
-    radial-gradient(1px 1px at 25% 52%, #fff 50%, transparent 60%),
-    radial-gradient(0.9px 0.9px at 50% 56%, #fff 50%, transparent 60%),
-    radial-gradient(1.1px 1.1px at 75% 52%, #fff 50%, transparent 60%),
-    radial-gradient(1px 1px at 12% 60%, #fff 50%, transparent 60%),
-    radial-gradient(1px 1px at 38% 64%, #fff 50%, transparent 60%),
-    radial-gradient(1.2px 1.2px at 65% 58%, #fff 50%, transparent 60%),
-    radial-gradient(1px 1px at 88% 62%, #fff 50%, transparent 60%);
+    radial-gradient(1.4px 1.4px at 3% 4%, #fff 50%, transparent 60%),
+    radial-gradient(0.9px 0.9px at 11% 12%, #fff 50%, transparent 60%),
+    radial-gradient(1.2px 1.2px at 7% 25%, #fff 50%, transparent 60%),
+    radial-gradient(1.1px 1.1px at 17% 6%, #fff 50%, transparent 60%),
+    radial-gradient(1.5px 1.5px at 22% 19%, #fff 50%, transparent 60%),
+    radial-gradient(0.9px 0.9px at 14% 33%, #fff 50%, transparent 60%),
+    radial-gradient(1.3px 1.3px at 27% 3%, #fff 50%, transparent 60%),
+    radial-gradient(1px 1px at 31% 14%, #fff 50%, transparent 60%),
+    radial-gradient(1.2px 1.2px at 36% 27%, #fff 50%, transparent 60%),
+    radial-gradient(0.9px 0.9px at 24% 41%, #fff 50%, transparent 60%),
+    radial-gradient(1.5px 1.5px at 41% 8%, #fff 50%, transparent 60%),
+    radial-gradient(1px 1px at 44% 19%, #fff 50%, transparent 60%),
+    radial-gradient(1.3px 1.3px at 49% 35%, #fff 50%, transparent 60%),
+    radial-gradient(1px 1px at 38% 51%, #fff 50%, transparent 60%),
+    radial-gradient(1.1px 1.1px at 54% 5%, #fff 50%, transparent 60%),
+    radial-gradient(1.4px 1.4px at 58% 22%, #fff 50%, transparent 60%),
+    radial-gradient(0.9px 0.9px at 63% 11%, #fff 50%, transparent 60%),
+    radial-gradient(1.2px 1.2px at 51% 47%, #fff 50%, transparent 60%),
+    radial-gradient(1px 1px at 67% 31%, #fff 50%, transparent 60%),
+    radial-gradient(1.3px 1.3px at 72% 17%, #fff 50%, transparent 60%),
+    radial-gradient(1.1px 1.1px at 76% 4%, #fff 50%, transparent 60%),
+    radial-gradient(0.9px 0.9px at 81% 24%, #fff 50%, transparent 60%),
+    radial-gradient(1.5px 1.5px at 85% 13%, #fff 50%, transparent 60%),
+    radial-gradient(1px 1px at 89% 33%, #fff 50%, transparent 60%),
+    radial-gradient(1.2px 1.2px at 93% 7%, #fff 50%, transparent 60%),
+    radial-gradient(1px 1px at 97% 20%, #fff 50%, transparent 60%),
+    radial-gradient(1px 1px at 60% 56%, #fff 50%, transparent 60%),
+    radial-gradient(0.9px 0.9px at 74% 45%, #fff 50%, transparent 60%),
+    radial-gradient(1.2px 1.2px at 84% 56%, #fff 50%, transparent 60%),
+    radial-gradient(0.9px 0.9px at 91% 47%, #fff 50%, transparent 60%),
+    radial-gradient(1px 1px at 8% 47%, #fff 50%, transparent 60%),
+    radial-gradient(0.9px 0.9px at 20% 56%, #fff 50%, transparent 60%),
+    radial-gradient(1.1px 1.1px at 33% 60%, #fff 50%, transparent 60%),
+    radial-gradient(1px 1px at 45% 63%, #fff 50%, transparent 60%);
   opacity: 0.9;
   pointer-events: none;
   z-index: 0;
@@ -1402,10 +1410,16 @@ html[data-theme="dark"] .tm-landing .show-art .billboard {
   box-shadow:
     0 0 30px rgba(255, 220, 150, 0.18),
     inset 0 0 20px rgba(255, 220, 150, 0.06);
+  z-index: 1;
 }
 html[data-theme="dark"] .tm-landing .show-art .post1,
 html[data-theme="dark"] .tm-landing .show-art .post2 {
   background: #1a1a22;
+  z-index: 1;
+}
+html[data-theme="dark"] .tm-landing .show-art .road,
+html[data-theme="dark"] .tm-landing .show-art .stripe {
+  z-index: 1;
 }
 html[data-theme="dark"] .tm-landing .show-art .stripe {
   background: repeating-linear-gradient(
